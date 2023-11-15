@@ -1,0 +1,11 @@
+.visitOurShop button:hover {
+  color: white;
+}
+
+.mainTitle {
+  background-color: rgba(140, 140, 140, 0.229);
+}
+
+.socialMedia img {
+  width: 5rem;
+}
