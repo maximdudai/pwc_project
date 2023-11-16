@@ -10,20 +10,18 @@
     </head>
     <body>      
         <!--Topo Cabecalho-->
-        <div class="top-header py-4" id="topoCabecalho">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img class="logo" src="../img/logo.jpg" height="60" alt="Logotipo">
-                    [Pet's for you]
-                  </a>
-            </div>
-        </div>
-        <!--Cabecalho-->
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark bg-gradient" id="cabecalho">
-            <div class="container">
-                <ul class="navbar-nav ms-auto">
+          <div class="container">
+                <a class="navbar-brand d-flex flex-row align-items-center" href="index.html">
+                    <img class="logo rounded-5 p-2" src="../img/logo.jpg" height="60" alt="Logotipo">
+                    <p class="d-flex flex-column">
+                      <span class="border-top-1 text-uppercase">PetCare</span>
+                      <span class="text-secondary">Adotar um animal</span>
+                    </p>
+                  </a>
+              <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a>
+                      <a class="nav-link " href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="pages/sobreNos.html">Sobre nós</a>
@@ -44,34 +42,88 @@
                       <a class="nav-link" href="pages/contactos.html">Contactos</a>
                     </li>
                   </ul>
+              </div>
+        </nav>
+
+        <main>
+          <div class="container">
+          <!--Conteudo Principal-->
+          <nav id="conteudoPrincipal">
+            <div class="row">
+              <div class="col">
+                <div class="mainTitle text-center my-4">
+                  <h1>Sobre Nós</h1>
+                </div>
+              </div>
             </div>
-        </nav>
-        
-        <!--Conteudo Principal-->
-        <nav id="conteudoPrincipal">
-            <h1>Sobre Nós</h1>
-            <p>Colocar algum texto que faça sentido. Colocar algum texto que faça sentido. Colocar algum texto que faça sentido. Colocar algum texto que faça sentido.</p>
-            <p>Colocar algum texto que faça sentido. Colocar algum texto que faça sentido. Colocar algum texto que faça sentido. Colocar algum texto que faça sentido.</p>
-            <p>Colocar algum texto que faça sentido. Colocar algum texto que faça sentido. Colocar algum texto que faça sentido.</p>
-            <!--Colocar 3 fotos com os nomes por baixo-->
-            <!--<div class="text-center">
-                <img src="../img/person.jpg" class="rounded float-start" alt="xx" width="250">
-                <img src="../img/person.jpg" class="rounded" alt="Ana" width="250">
-                <img src="../img/person.jpg" class="rounded float-end" alt="Ana" width="250">
-              </div>-->
-            
-        </nav>
+
+            <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+              <a class="navbar-brand" href="../index.html">
+              <img class="logo rounded-5 p-2" src="../img/logo.jpg" height="60" alt="Logotipo">
+              </a>
+              <ul class="nav nav-pills">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="pages/sobreNos.html" role="button" aria-expanded="false">Sobre Nós</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading1">Third</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading2">Fourth</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Fifth</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+              <h4 id="scrollspyHeading1"></h4>
+              <p>A nossa página "PetCare" foi desenvolvida com o objetivo de auxiliar o cliente a descobrir o animal 
+                dos seus sonhos ou o brinquedo ideal para o seu companheiro de quatro patas, proporcionando uma 
+                experiência fácil e rápida, através de apenas alguns cliques.</p>
+                <p>Desenvolvedores da "PetCare" são Ana, Edo, Maxim. </p>
+                <p>15 de novembro de 2023</p>
+              <!--h4 id="scrollspyHeading2">Second heading</h4>
+              <p>...</p>
+              <h4 id="scrollspyHeading3">Third heading</h4>
+              <p>...</p>
+              <h4 id="scrollspyHeading4">Fourth heading</h4>
+              <p>...</p>
+              <h4 id="scrollspyHeading5">Fifth heading</h4>
+              <p>...</p-->
+            </div>
+
+            <div class="text-center">
+              <div class="row d-flex justify-content-center">
+                <div class="col-8">
+                  <p>A nossa página "PetCare" foi desenvolvida com o objetivo de auxiliar o cliente a descobrir o animal 
+                    dos seus sonhos ou o brinquedo ideal para o seu companheiro de quatro patas, proporcionando uma 
+                    experiência fácil e rápida, através de apenas alguns cliques.</p>
+                  <p>Desenvolvedores da "PetCare" são Ana, Edo, Maxim. </p>
+                  <p>15 de novembro de 2023</p>
+                </div>
+              </div>
+            </div>
+
+            </div>
+              <!--Colocar 3 fotos com os nomes por baixo-->
+              <!--div class="text-center">
+                  <img src="../img/person.jpg" class="float-start rounded-circle" alt="Ana" width="200">
+                  <img src="../img/person.jpg" class="rounded-circle" alt="Edo" width="200">
+                  <img src="../img/person.jpg" class="float-end rounded-circle" alt="Maxim" width="200">
+              </div-->
+          </nav>
+
+        </div>
+      </main>
 
         <!--Rodape-->
         <footer class="bg-dark py-5 mt-5">
-            <div class="container text-light text-center">
-                <h3 class="bg-dark py-5 mt-5">SIGA-NOS NAS REDES SOCIAIS</h3>
-                <p> 
-                    <a href="wwww.facebook.pt/[Pet's_for_you]" target="_blank"><img src="../img/facebook.png" alt="Facebook" width="50"></a>
-                    <a href="wwww.instagram.pt/[Pet's_for_you]" target="_blank"><img src="../img/instagram.png" alt="Instagram" width="55"></a>
-                </p>
-                <small class="text-white-50">Termos de Uso | Política de Privacidade |  Developed by [Ana, Edo, Maxim]
-            </div>    
-        </footer>
+          <div class="container text-light text-center">
+              <h3 class="bg-dark py-5 mt-5">SIGA-NOS NAS REDES SOCIAIS</h3>
+              <p> 
+                  <a href="wwww.facebook.pt/[Pet's_for_you]"><img src="../img/facebook.png" alt="Facebook" width="25"></a>
+                  <a href="wwww.instagram.pt/[Pet's_for_you]"><img src="../img/instagram.png" alt="Instagram" width="25"></a>
+              </p>
+              <small class="text-white-50">Termos de Uso | Política de Privacidade |  Developed by [Ana, Edo, Maxim]
+          </div>    
+      </footer>
     </body>
 </html>
