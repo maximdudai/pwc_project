@@ -15,176 +15,206 @@
   </head>
   <body>
     <!--Cabecalho-->
-    <nav
-      class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark bg-gradient"
-      id="cabecalho"
-    >
+    <nav id="cabecalho" class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark bg-gradient px-3 mb-3">
       <div class="container">
-        <a
-          class="navbar-brand d-flex flex-row align-items-center"
-          href="index.html"
+        <a 
+        class="navbar-brand d-flex flex-row align-items-center" 
+        href="index.html"
         >
-          <img
-            class="logo rounded-5 p-2"
-            src="img/logo.jpg"
-            height="60"
-            alt="Logotipo"
-          />
-          <p class="d-flex flex-column">
-            <span class="border-top-1 text-uppercase">PetCare</span>
-            <span class="text-secondary">Adotar um animal</span>
-          </p>
-        </a>
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html"
-              >Home</a
-            >
+          <img 
+          class="logo rounded-5 p-2" 
+          src="img/logo.jpg" 
+          height="60" 
+          alt="Logotipo"
+          >
+            <p class="d-flex flex-column">
+              <span class="border-top-1 text-uppercase">PetCare</span>
+              <span class="text-secondary">Adotar um animal</span>
+            </p>
+          </a>
+        <ul class="nav nav-pills grid gap-1">
+          <li class="nav-item dropdown">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-outline-light dropdown-toggle active" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#pictureHome">Imagem</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#goalsHome">Objetivos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#questionsHome">Questões Frequentes</a></li>
+            </ul>
+          </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/sobreNos.html">Sobre nós</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/loja.html">Loja</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/caesAdocao.html"
-              >Cães para adoção</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/adotar.html">Adotar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/favoritos.html">Favoritos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/contactos.html">Contactos</a>
-          </li>
+          <ul class="navbar-nav ms-auto grid gap-1">
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
+                Sobre Nós
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
+                Loja
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
+                Cães para adoção
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
+                Adotar
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
+                Favoritos 
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
+                Contactos
+              </a>
+            </li>
+          </ul>
         </ul>
       </div>
     </nav>
 
     <main>
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <div
-              class="mainTitle shadow-sm border p-2 rounded text-center my-5"
-            >
-              <h1 class="text-uppercase">Lorem ipsum dolor sit amet.</h1>
-              <h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
-                laborum.
-              </h3>
-            </div>
-          </div>
-        </div>
+        <div
+          data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-root-margin="0px 0px -40%" 
+          data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0"
+        >
 
-        <div class="row d-flex justify-content-center">
-          <div id="carouselExampleFade" class="carousel my-2 slide carousel-fade">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img/slideImage1.jpg" class="d-block rounded w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/slideImage2.jpg" class="d-block rounded w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/slideImage3.jpg" class="d-block rounded w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <p class="card-text">
-                  Na PetCare, acreditamos que todo animal merece um lar amoroso.
-                  Nos esforçamos para resgatar, reabilitar e realocar animais de
-                  diversas origens, garantindo que encontrem famílias carinhosas
-                  que os valorizem para toda a vida. Nossa organização opera com
-                  base nos princípios de compaixão, responsabilidade e respeito
-                  por todos os seres vivos.
-                </p>
-              </div>
-              <div class="card-body">
-                <p class="card-title border-bottom border-danger">Objetivos</p>
-                <ul>
-                  <li>Aumentar Taxa de Adoção</li>
-                  <li>Campanhas de Conscientização</li>
-                </ul>
-              </div>
-
-              <div class="visitOurShop">
-                <button
-                  type="button"
-                  class="btn btn-outline-info w-100 border-0 border-top rounded-0 text-uppercase fw-bold"
-                >
-                  visit our friends
-                </button>
+        <h4 id="picturoHome">
+          <div class="row">
+            <div class="col">
+              <div
+                class="mainTitle shadow-sm border p-2 rounded text-center my-5"
+              >
+                <h1 class="text-uppercase">Lorem ipsum dolor sit amet.</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
+                  laborum.
+                </h3>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <p class="card-text border-bottom border-danger">
-                  Perguntas Frequentes
-                </p>
+        </h4>
+          <div class="row d-flex justify-content-center">
+            <div id="carouselExampleFade" class="carousel my-2 slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/slideImage1.jpg" class="d-block rounded w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/slideImage2.jpg" class="d-block rounded w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/slideImage3.jpg" class="d-block rounded w-100" alt="...">
+                </div>
               </div>
-              <div class="card-body">
-                <ul>
-                  <li>
-                    <h6 class="fqQuestion">
-                      Como posso adotar um animal da PetCare?
-                    </h6>
-                    <p class="fqAnswer text-secondary">
-                      Pode iniciar o processo preenchendo um formulário de
-                      adoção no nosso site. Após análise, a nossa equipa entrará
-                      em contacto para agendar uma visita e discutir a adoção.
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <h4 id="goalsHome"></h4>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Na PetCare, acreditamos que todo animal merece um lar amoroso.
+                      Nos esforçamos para resgatar, reabilitar e realocar animais de
+                      diversas origens, garantindo que encontrem famílias carinhosas
+                      que os valorizem para toda a vida. Nossa organização opera com
+                      base nos princípios de compaixão, responsabilidade e respeito
+                      por todos os seres vivos.
                     </p>
-                  </li>
-                  <li>
-                    <h6 class="fqQuestion">Existe uma taxa de adoção?</h6>
-                    <p class="fqAnswer text-secondary">
-                      Sim, geralmente existe uma taxa de adoção que ajuda a
-                      cobrir os custos de cuidados, vacinação e esterilização do
-                      animal. Esta taxa contribui para o suporte contínuo da
-                      nossa missão de resgate e cuidado animal.
-                    </p>
-                  </li>
-                  <li>
-                    <h6 class="fqQuestion">
-                      Os animais já estão vacinados e esterilizados?
-                    </h6>
-                    <p class="fqAnswer text-secondary">
-                      Sim, todos os animais disponíveis para adoção são
-                      vacinados, esterilizados e recebem cuidados veterinários
-                      básicos antes de serem entregues aos novos lares.
-                    </p>
-                  </li>
-                  <li>
-                    <h6 class="fqQuestion">
-                      Posso adotar se morar num apartamento?
-                    </h6>
-                    <p class="fqAnswer text-secondary">
-                      Sim, é possível adotar mesmo vivendo num apartamento.
-                      Avaliamos cada caso individualmente para garantir que o
-                      ambiente seja adequado ao tamanho e às necessidades
-                      específicas do animal.
-                    </p>
-                  </li>
-                </ul>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title border-bottom border-danger">Objetivos</p>
+                    <ul>
+                      <li>Aumentar Taxa de Adoção</li>
+                      <li>Campanhas de Conscientização</li>
+                    </ul>
+                  </div>
+    
+                  <div class="visitOurShop">
+                    <button
+                      type="button"
+                      class="btn btn-outline-info w-100 border-0 border-top rounded-0 text-uppercase fw-bold"
+                    >
+                      visit our friends
+                    </button>
+                  </div>
+                </div>
+              </div>
+            
+          <h4 id="questionsHome"></h4>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text border-bottom border-danger">
+                    Perguntas Frequentes
+                  </p>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li>
+                      <h6 class="fqQuestion">
+                        Como posso adotar um animal da PetCare?
+                      </h6>
+                      <p class="fqAnswer text-secondary">
+                        Pode iniciar o processo preenchendo um formulário de
+                        adoção no nosso site. Após análise, a nossa equipa entrará
+                        em contacto para agendar uma visita e discutir a adoção.
+                      </p>
+                    </li>
+                    <li>
+                      <h6 class="fqQuestion">Existe uma taxa de adoção?</h6>
+                      <p class="fqAnswer text-secondary">
+                        Sim, geralmente existe uma taxa de adoção que ajuda a
+                        cobrir os custos de cuidados, vacinação e esterilização do
+                        animal. Esta taxa contribui para o suporte contínuo da
+                        nossa missão de resgate e cuidado animal.
+                      </p>
+                    </li>
+                    <li>
+                      <h6 class="fqQuestion">
+                        Os animais já estão vacinados e esterilizados?
+                      </h6>
+                      <p class="fqAnswer text-secondary">
+                        Sim, todos os animais disponíveis para adoção são
+                        vacinados, esterilizados e recebem cuidados veterinários
+                        básicos antes de serem entregues aos novos lares.
+                      </p>
+                    </li>
+                    <li>
+                      <h6 class="fqQuestion">
+                        Posso adotar se morar num apartamento?
+                      </h6>
+                      <p class="fqAnswer text-secondary">
+                        Sim, é possível adotar mesmo vivendo num apartamento.
+                        Avaliamos cada caso individualmente para garantir que o
+                        ambiente seja adequado ao tamanho e às necessidades
+                        específicas do animal.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
