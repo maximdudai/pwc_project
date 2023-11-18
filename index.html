@@ -44,10 +44,15 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse d-flex justify-content-center justify-content-lg-end" id="navbarNav">
-          <ul class="nav nav-pills d-flex flex-column flex-lg-row justify-content-center align-content-center gap-1">
+        <div
+          class="collapse navbar-collapse d-flex justify-content-center justify-content-lg-end"
+          id="navbarNav"
+        >
+          <ul
+            class="nav nav-pills d-flex flex-column flex-lg-row justify-content-center align-content-center gap-1"
+          >
             <li class="nav-item dropdown">
-              <div class="btn-group w-100" role="group">
+              <div class="btn-group" role="group">
                 <button
                   type="button"
                   class="btn btn-outline-light dropdown-toggle active"
@@ -243,6 +248,51 @@
                     visit our friends
                   </button>
                 </div>
+              </div>
+
+              <div class="card my-1">
+                <div class="card-header mb-3 text-bg-secondary fst-italic">
+                  Alguma questão ou sugestão? Contacte-nos!
+                </div>
+
+                <form method="post">
+                  <div class="input-group mb-3 px-1">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Username"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+
+                  <div class="input-group mb-3 px-1">
+                    <span class="input-group-text" id="basic-addon2">@</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Email Address"
+                      aria-label="Email Address"
+                      aria-describedby="basic-addon2"
+                    />
+                  </div>
+
+                  <div class="input-group mb-2 px-1">
+                    <span class="input-group-text">Message</span>
+                    <textarea
+                      class="form-control contactMessage"
+                      aria-label="With textarea"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn btn-outline-success w-100 rounded-0"
+                  >
+                    Contactar
+                  </button>
+                </form>
               </div>
             </div>
 

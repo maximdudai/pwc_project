@@ -9,3 +9,7 @@
 .socialMedia img {
   width: 5rem;
 }
+
+.contactMessage {
+  resize: none;
+}
