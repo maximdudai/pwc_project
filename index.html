@@ -15,84 +15,136 @@
   </head>
   <body>
     <!--Cabecalho-->
-    <nav id="cabecalho" class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark bg-gradient px-3 mb-3">
+    <nav
+      id="cabecalho"
+      class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark bg-gradient px-3 mb-3"
+    >
       <div class="container">
-        <a 
-        class="navbar-brand d-flex flex-row align-items-center" 
-        href="index.html"
+        <a class="navbar-brand" href="index.html">
+          <img
+            class="logo rounded-5 p-2"
+            src="img/logo.jpg"
+            height="60"
+            alt="Logotipo"
+          />
+          <p class="d-flex flex-column">
+            <span class="border-top-1 text-uppercase">PetCare</span>
+            <span class="text-secondary">Adotar um animal</span>
+          </p>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <img 
-          class="logo rounded-5 p-2" 
-          src="img/logo.jpg" 
-          height="60" 
-          alt="Logotipo"
-          >
-            <p class="d-flex flex-column">
-              <span class="border-top-1 text-uppercase">PetCare</span>
-              <span class="text-secondary">Adotar um animal</span>
-            </p>
-          </a>
-        <ul class="nav nav-pills grid gap-1">
-          <li class="nav-item dropdown">
-            <div class="btn-group" role="group">
-              <button type="button" class="btn btn-outline-light dropdown-toggle active" data-bs-toggle="dropdown" aria-expanded="false">
-                Home
-              </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#pictureHome">Imagem</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#goalsHome">Objetivos</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#questionsHome">Questões Frequentes</a></li>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-center justify-content-lg-end" id="navbarNav">
+          <ul class="nav nav-pills d-flex flex-column flex-lg-row justify-content-center align-content-center gap-1">
+            <li class="nav-item dropdown">
+              <div class="btn-group w-100" role="group">
+                <button
+                  type="button"
+                  class="btn btn-outline-light dropdown-toggle active"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Home
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#animalsGallery">Imagem</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#companyGoals">Objetivos</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#frequentlyQuestions"
+                      >Questões Frequentes</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <ul class="navbar-nav ms-auto grid gap-1">
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100"
+                  href="pages/sobreNos.html"
+                  role="button"
+                >
+                  Sobre Nós
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100"
+                  href="pages/sobreNos.html"
+                  role="button"
+                >
+                  Loja
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100"
+                  href="pages/sobreNos.html"
+                  role="button"
+                >
+                  Cães para adoção
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100"
+                  href="pages/sobreNos.html"
+                  role="button"
+                >
+                  Adotar
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100"
+                  href="pages/sobreNos.html"
+                  role="button"
+                >
+                  Favoritos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100"
+                  href="pages/sobreNos.html"
+                  role="button"
+                >
+                  Contactos
+                </a>
+              </li>
             </ul>
-          </div>
-          </li>
-          <ul class="navbar-nav ms-auto grid gap-1">
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
-                Sobre Nós
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
-                Loja
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
-                Cães para adoção
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
-                Adotar
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
-                Favoritos 
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
-                Contactos
-              </a>
-            </li>
           </ul>
-        </ul>
+        </div>
       </div>
     </nav>
 
     <main>
       <div class="container">
         <div
-          data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-root-margin="0px 0px -40%" 
-          data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0"
+          data-bs-spy="scroll"
+          data-bs-target="#cabecalho"
+          data-bs-root-margin="0px 0px -40%"
+          data-bs-smooth-scroll="true"
+          class="scrollspy-example bg-body-tertiary p-3 rounded-2"
+          tabindex="0"
         >
-
-        <h4 id="picturoHome">
-          <div class="row">
+          <div class="row" id="animalsGallery">
             <div class="col">
               <div
                 class="mainTitle shadow-sm border p-2 rounded text-center my-5"
@@ -105,66 +157,96 @@
               </div>
             </div>
           </div>
-        </h4>
           <div class="row d-flex justify-content-center">
-            <div id="carouselExampleFade" class="carousel my-2 slide carousel-fade">
+            <div
+              id="carouselExampleFade"
+              class="carousel my-2 slide carousel-fade"
+            >
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="img/slideImage1.jpg" class="d-block rounded w-100" alt="...">
+                  <img
+                    src="img/slideImage1.jpg"
+                    class="d-block rounded w-100"
+                    alt="..."
+                  />
                 </div>
                 <div class="carousel-item">
-                  <img src="img/slideImage2.jpg" class="d-block rounded w-100" alt="...">
+                  <img
+                    src="img/slideImage2.jpg"
+                    class="d-block rounded w-100"
+                    alt="..."
+                  />
                 </div>
                 <div class="carousel-item">
-                  <img src="img/slideImage3.jpg" class="d-block rounded w-100" alt="...">
+                  <img
+                    src="img/slideImage3.jpg"
+                    class="d-block rounded w-100"
+                    alt="..."
+                  />
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleFade"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
           </div>
 
-          <h4 id="goalsHome"></h4>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-text">
-                      Na PetCare, acreditamos que todo animal merece um lar amoroso.
-                      Nos esforçamos para resgatar, reabilitar e realocar animais de
-                      diversas origens, garantindo que encontrem famílias carinhosas
-                      que os valorizem para toda a vida. Nossa organização opera com
-                      base nos princípios de compaixão, responsabilidade e respeito
-                      por todos os seres vivos.
-                    </p>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-title border-bottom border-danger">Objetivos</p>
-                    <ul>
-                      <li>Aumentar Taxa de Adoção</li>
-                      <li>Campanhas de Conscientização</li>
-                    </ul>
-                  </div>
-    
-                  <div class="visitOurShop">
-                    <button
-                      type="button"
-                      class="btn btn-outline-info w-100 border-0 border-top rounded-0 text-uppercase fw-bold"
-                    >
-                      visit our friends
-                    </button>
-                  </div>
+          <div class="row" id="companyGoals">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">
+                    Na PetCare, acreditamos que todo animal merece um lar
+                    amoroso. Nos esforçamos para resgatar, reabilitar e realocar
+                    animais de diversas origens, garantindo que encontrem
+                    famílias carinhosas que os valorizem para toda a vida. Nossa
+                    organização opera com base nos princípios de compaixão,
+                    responsabilidade e respeito por todos os seres vivos.
+                  </p>
+                </div>
+                <div class="card-body">
+                  <p class="card-title border-bottom border-danger">
+                    Objetivos
+                  </p>
+                  <ul>
+                    <li>Aumentar Taxa de Adoção</li>
+                    <li>Campanhas de Conscientização</li>
+                  </ul>
+                </div>
+
+                <div class="visitOurShop">
+                  <button
+                    type="button"
+                    class="btn btn-outline-info w-100 border-0 border-top rounded-0 text-uppercase fw-bold"
+                  >
+                    visit our friends
+                  </button>
                 </div>
               </div>
-            
-          <h4 id="questionsHome"></h4>
-            <div class="col-md-6">
+            </div>
+
+            <div class="col-md-6" id="frequentlyQuestions">
               <div class="card">
                 <div class="card-body">
                   <p class="card-text border-bottom border-danger">
@@ -179,17 +261,18 @@
                       </h6>
                       <p class="fqAnswer text-secondary">
                         Pode iniciar o processo preenchendo um formulário de
-                        adoção no nosso site. Após análise, a nossa equipa entrará
-                        em contacto para agendar uma visita e discutir a adoção.
+                        adoção no nosso site. Após análise, a nossa equipa
+                        entrará em contacto para agendar uma visita e discutir a
+                        adoção.
                       </p>
                     </li>
                     <li>
                       <h6 class="fqQuestion">Existe uma taxa de adoção?</h6>
                       <p class="fqAnswer text-secondary">
                         Sim, geralmente existe uma taxa de adoção que ajuda a
-                        cobrir os custos de cuidados, vacinação e esterilização do
-                        animal. Esta taxa contribui para o suporte contínuo da
-                        nossa missão de resgate e cuidado animal.
+                        cobrir os custos de cuidados, vacinação e esterilização
+                        do animal. Esta taxa contribui para o suporte contínuo
+                        da nossa missão de resgate e cuidado animal.
                       </p>
                     </li>
                     <li>
@@ -233,15 +316,43 @@
           <img src="img/instagram.png" alt="Instagram" />
         </a>
 
-        <p class="text-white-50">
-          Termos de Uso | Política de Privacidade | Developed by [Ana, Edo,
-          Maxim]
-        </p>
+        <p class="text-white-50">Termos de Uso | Política de Privacidade</p>
+        <div class="developersTeam">
+          <span class="fs-6 fst-italic text-secondary">
+            Developed by
+            <!-- GITHUB LINK -->
+          </span>
+          <a
+            class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+            href="https://github.com/ana-fg"
+            target="_blank"
+          >
+            Ana
+          </a>
+          <a
+            class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+            href="https://github.com/18pingu18"
+            target="_blank"
+          >
+            Edo
+          </a>
+          <a
+            class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+            href="https://www.maxdev.live/"
+            target="_blank"
+          >
+            Maxim
+          </a>
+        </div>
       </div>
     </footer>
 
     <!--Bootstrap e JS-->
     <script src="script/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
