@@ -3,7 +3,7 @@
 const carouselItem = document?.querySelectorAll(".carousel-item");
 
 carouselItem.forEach((item) => {
-    item.addEventListener("click", (e) => {
+    item.addEventListener("click", () => {
         const carouselItemActive = document.querySelector(".carousel-item.active");
         
         carouselItemActive?.classList.remove("active");

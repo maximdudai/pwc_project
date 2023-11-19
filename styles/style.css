@@ -1,4 +1,13 @@
-.visitOurShop button:hover {
+.visitOurShop button,
+.contactUs button
+{
+  letter-spacing: 1.5px;
+}
+
+.visitOurShop button:hover,
+.contactUs button:hover,
+.adoptAnimal:hover
+{
   color: white;
 }
 
@@ -12,4 +21,12 @@
 
 .contactMessage {
   resize: none;
+}
+
+.animalNameTitle {
+  font-size: .8rem;
+  opacity: .7;
+}
+.reducedPrice {
+  font-size: .7rem;
 }
