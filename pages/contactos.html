@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetCare - Loja Produtos</title>
+
+    <meta name="description" content="Loja online para adotar animais" />
+    <meta
+      name="keywords"
+      content="adotar, animais, acessorios, loja, online, encomendar, rações, produtos, facilidade, detalhes"
+    />
+    <meta name="author" content="Ana, Edo, Maxim" />
+
+    <!--Bootstrap e CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+  </head>
+  <body>
+    <!--Cabecalho-->
+    <nav
+      id="cabecalho"
+      class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient px-3 mb-3"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex" href="index.html">
+          <img
+            class="logo rounded-5 p-2"
+            src="../img/logo.jpg"
+            height="60"
+            alt="Logotipo"
+          />
+          <p class="d-flex flex-column">
+            <span class="border-top-1 text-uppercase">PetCare</span>
+            <span class="text-secondary">Adotar um animal</span>
+          </p>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-flex justify-content-center justify-content-lg-end"
+          id="navbarNav"
+        >
+          <ul
+            class="nav nav-pills d-flex flex-column flex-lg-row justify-content-center align-content-center gap-1"
+          >
+            <ul class="navbar-nav ms-auto grid gap-1">
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100"
+                  href="../index.html"
+                  role="button"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100"
+                  href="sobreNos.html"
+                  role="button"
+                >
+                  Sobre Nós
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100"
+                  href="loja.html"
+                  role="button"
+                >
+                  Loja
+                </a>
+              </li>
+              <!-- ETAPA 1 -->
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100 disabled"
+                  href="sobreNos.html"
+                  role="button"
+                >
+                  Cães para adoção
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100"
+                  href="sobreNos.html"
+                  role="button"
+                >
+                  Adotar
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100"
+                  href="sobreNos.html"
+                  role="button"
+                >
+                  Favoritos
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <div class="btn-group" role="group">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light dropdown-toggle active"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Contactar
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#contactForm">Contactar</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#worldLocation">Localização</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <div class="currentPage pb-2">
+          <a
+            class="text-decoration-none text-secondary p-2 border border-1 border-secondary-subtle rounded"
+            href="../index.html"
+            >Home</a
+          >
+          <i class="bi bi-arrow-right"></i>
+          <a
+            class="text-decoration-none text-secondary p-2 border border-1 border-secondary-subtle rounded"
+            href="loja.html"
+            >Loja</a
+          >
+        </div>
+        <div
+          data-bs-spy="scroll"
+          data-bs-target="#cabecalho"
+          data-bs-root-margin="0px 0px -40%"
+          data-bs-smooth-scroll="true"
+          class="scrollspy-example bg-body-tertiary p-3 rounded-2 my-3"
+          tabindex="0"
+        >
+        <div class="row my-5">
+
+          <div class="col-md-6">
+            <form>
+              <div class="input-group mb-3 px-1">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nome Completo"
+                  aria-label="Nome Completo"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+
+              <div class="input-group mb-3 px-1">
+                <span class="input-group-text" id="basic-addon2">@</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="E-mail"
+                  aria-label="E-mail"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+
+              <div class="input-group mb-2 px-1">
+                <span class="input-group-text">Mensagem</span>
+                <textarea
+                  class="form-control contactMessage"
+                  aria-label="With textarea"
+                ></textarea>
+              </div>
+
+              <div class="contactUs">
+                <button
+                  type="submit"
+                  class="btn btn-outline-info w-100 border-0 border-top rounded-0 text-uppercase fw-bold"
+                >
+                  Contactar
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <img class="w-100" src="https://petapixel.com/assets/uploads/2023/04/facebook-contact-support-featured.jpg" alt="contact banner">
+          </div>
+
+        </div>
+        <div class="row text-center">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.092913870718!2d-8.816181111472691!3d39.73756369821852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22736645a6f521%3A0x6be7f333c202b1c9!2sPolit%C3%A9cnico%20de%20Leiria!5e0!3m2!1spt-PT!2spt!4v1700508016590!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      </div>
+    </main>
+
+    <!--Rodape-->
+    <footer class="bg-dark p-1 mt-5">
+      <div class="container text-light text-center">
+        <h3 class="bg-dark p-1 mt-5">SIGA-NOS NAS REDES SOCIAIS</h3>
+        <a class="socialMedia" href="#">
+          <img src="../img/facebook.png" alt="Facebook" />
+        </a>
+        <a class="socialMedia" href="#">
+          <img src="../img/instagram.png" alt="Instagram" />
+        </a>
+
+        <p class="text-white-50">Termos de Uso | Política de Privacidade</p>
+        <div class="developersTeam">
+          <span class="fs-6 fst-italic text-secondary">
+            Developed by
+            <!-- GITHUB LINK -->
+          </span>
+          <a
+            class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+            href="https://github.com/ana-fg"
+            target="_blank"
+          >
+            Ana
+          </a>
+          <a
+            class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+            href="https://github.com/18pingu18"
+            target="_blank"
+          >
+            Edo
+          </a>
+          <a
+            class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+            href="https://www.maxdev.live/"
+            target="_blank"
+          >
+            Maxim
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script/loja.js"></script>
+
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!--Bootstrap e JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
