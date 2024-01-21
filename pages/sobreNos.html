@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre nós - [Pet's for you]</title>
+    <title>Inicio - PetCare</title>
     <!--Bootstrap e CSS-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -13,69 +13,118 @@
     />
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
   </head>
-    <body>      
-        <!--Topo Cabecalho-->
-        <nav id="cabecalho" class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark bg-gradient px-3 mb-3">
-          <div class="container">
-            <a 
-            class="navbar-brand d-flex flex-row align-items-center" 
-            href="../index.html"
-            >
-              <img 
-              class="logo rounded-5 p-2" 
-              src="../img/logo.jpg" 
-              height="60" 
-              alt="Logotipo"
+
+  <body>
+    <!--Cabecalho-->
+    <nav
+      id="cabecalho"
+      class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient px-3 mb-3"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex" href="index.html">
+          <img
+            class="logo rounded-5 p-2"
+            src="../img/logo.jpg"
+            height="60"
+            alt="Logotipo"
+          />
+          <p class="d-flex flex-column">
+            <span class="border-top-1 text-uppercase">PetCare</span>
+            <span class="text-secondary">Adotar um animal</span>
+          </p>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-flex justify-content-center justify-content-lg-end"
+          id="navbarNav"
+        >
+          <ul
+              class="nav nav-pills d-flex flex-column flex-lg-row justify-content-center align-content-center gap-1"
+          >
+          <ul class="navbar-nav ms-auto grid gap-1">
+            <li class="nav-item">
+              <a
+                class="btn btn-outline-secondary w-100"
+                href="../index.html"
+                role="button"
               >
-                <p class="d-flex flex-column">
-                  <span class="border-top-1 text-uppercase">PetCare</span>
-                  <span class="text-secondary">Adotar um animal</span>
-                </p>
+                Home
               </a>
-            <ul class="nav nav-pills grid gap-1">
-              <ul class="navbar-nav ms-auto">
-                </li>
+            </li>
+          </ul>
+          <li class="nav-item dropdown">
+            <div class="btn-group" role="group">
+              <button
+                type="button"
+                class="btn btn-outline-light dropdown-toggle active"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+              Sobre Nós
+              </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#sobreNos">Informação</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+              <ul class="navbar-nav ms-auto grid gap-1">
                 <li class="nav-item">
-                  <a class="btn btn-outline-secondary" href="../index.html" role="button">
-                    Home
+                  <a
+                    class="btn btn-outline-secondary w-100"
+                    href="loja.html"
+                    role="button"
+                  >
+                  Loja
                   </a>
                 </li>
-              </ul>
-                <li class="nav-item dropdown">
-                  <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-light dropdown-toggle active" data-bs-toggle="dropdown" aria-expanded="false">
-                      Sobre Nós
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#sobreNos">Informação</a></li>
-                      <!--li><hr class="dropdown-divider"></li-->
-                    </ul>
-                  </div>
-                </li>
-              <ul class="navbar-nav ms-auto">
+                <!-- ETAPA 1 -->
                 <li class="nav-item">
-                  <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
-                    Loja
+                  <a
+                    class="btn btn-outline-secondary w-100 disabled"
+                    href="caesAdocao.html"
+                    role="button"
+                  >
+                  Cães para adoção
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
-                    Cães para adoção
+                  <a
+                    class="btn btn-outline-secondary w-100"
+                    href="adotar.html"
+                    role="button"
+                  >
+                  Adotar
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
-                    Adotar
+                  <a
+                    class="btn btn-outline-secondary w-100"
+                    href="favoritos.html"
+                    role="button"
+                  >
+                  Favoritos
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
-                    Favoritos 
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="btn btn-outline-secondary" href="pages/sobreNos.html" role="button">
-                    Contactos
+                  <a
+                    class="btn btn-outline-secondary w-100"
+                    href="contactos.html"
+                    role="button"
+                  >
+                  Contactos
                   </a>
                 </li>
               </ul>
@@ -124,22 +173,46 @@
       </main>
 
         <!--Rodape-->
-    <footer class="bg-dark p-1 mt-5 position-absolute bottom-0 w-100">
-      <div class="container text-light text-center">
-        <h3 class="bg-dark p-1 mt-5">SIGA-NOS NAS REDES SOCIAIS</h3>
-        <a class="socialMedia" href="#">
-          <img src="../img/facebook.png" alt="Facebook" />
-        </a>
-        <a class="socialMedia" href="#">
-          <img src="../img/instagram.png" alt="Instagram" />
-        </a>
-
-        <p class="text-white-50">
-          Termos de Uso | Política de Privacidade | Developed by [Ana, Edo,
-          Maxim]
-        </p>
-      </div>
-    </footer>
+        <footer class="bg-dark p-1 mt-5 position-absolute bottom-0 w-100">
+          <div class="container text-light text-center">
+            <h3 class="bg-dark p-1 mt-5">SIGA-NOS NAS REDES SOCIAIS</h3>
+            <a class="socialMedia" href="#">
+              <img src="../img/facebook.png" alt="Facebook" />
+            </a>
+            <a class="socialMedia" href="#">
+              <img src="../img/instagram.png" alt="Instagram" />
+            </a>
+      
+            <p class="text-white-50">Termos de Uso | Política de Privacidade</p>
+            <div class="developersTeam">
+              <span class="fs-6 fst-italic text-secondary">
+                Developed by
+                <!-- GITHUB LINK -->
+              </span>
+              <a
+                class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+                href="https://github.com/ana-fg"
+                target="_blank"
+              >
+                Ana
+              </a>
+              <a
+                class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+                href="https://github.com/18pingu18"
+                target="_blank"
+              >
+                Edo
+              </a>
+              <a
+                class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+                href="https://www.maxdev.live/"
+                target="_blank"
+              >
+                Maxim
+              </a>
+            </div>
+          </div>
+        </footer>
 
     <!--Bootstrap e JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

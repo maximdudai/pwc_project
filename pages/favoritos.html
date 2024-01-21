@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PetCare - Loja Produtos</title>
+    <title>Favoritos - PetCare</title>
 
     <meta name="description" content="Loja online para adotar animais" />
     <meta
@@ -84,36 +84,20 @@
                   Sobre Nós
                 </a>
               </li>
-              <li class="nav-item dropdown">
-                <div class="btn-group" role="group">
-                  <button
-                    type="button"
-                    class="btn btn-outline-light dropdown-toggle active"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Loja
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#availableAnimals"
-                        >Animais</a
-                      >
-                    </li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li>
-                      <a class="dropdown-item" href="#specificAnimal"
-                        >Mais Detalhes</a
-                      >
-                    </li>
-                  </ul>
-                </div>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-secondary w-100"
+                  href="loja.html"
+                  role="button"
+                >
+                  Loja
+                </a>
               </li>
               <!-- ETAPA 1 -->
               <li class="nav-item">
                 <a
                   class="btn btn-outline-secondary w-100 disabled"
-                  href="sobreNos.html"
+                  href="caesAdocao.html"
                   role="button"
                 >
                   Cães para adoção
@@ -122,25 +106,39 @@
               <li class="nav-item">
                 <a
                   class="btn btn-outline-secondary w-100"
-                  href="sobreNos.html"
+                  href="adotar.html"
                   role="button"
                 >
                   Adotar
                 </a>
               </li>
-              <li class="nav-item">
-                <a
-                  class="btn btn-outline-secondary w-100"
-                  href="sobreNos.html"
-                  role="button"
-                >
+              </ul>
+              <li class="nav-item dropdown">
+                <div class="btn-group" role="group">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light dropdown-toggle active"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
                   Favoritos
-                </a>
+                  </button>
+                </ul>
+                  <ul class="dropdown-menu">
+                    <!--li>
+                      <a class="dropdown-item" href="#availableAnimals"
+                        >Animais</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li-->
+                  </ul>
+                </div>
               </li>
+              <ul class="navbar-nav ms-auto grid gap-1">
               <li class="nav-item">
                 <a
                   class="btn btn-outline-secondary w-100"
-                  href="sobreNos.html"
+                  href="contactos.html"
                   role="button"
                 >
                   Contactos
@@ -232,46 +230,46 @@
     </main>
 
     <!--Rodape-->
-    <footer class="bg-dark p-1 mt-5">
-      <div class="container text-light text-center">
-        <h3 class="bg-dark p-1 mt-5">SIGA-NOS NAS REDES SOCIAIS</h3>
-        <a class="socialMedia" href="#">
-          <img src="../img/facebook.png" alt="Facebook" />
-        </a>
-        <a class="socialMedia" href="#">
-          <img src="../img/instagram.png" alt="Instagram" />
-        </a>
-
-        <p class="text-white-50">Termos de Uso | Política de Privacidade</p>
-        <div class="developersTeam">
-          <span class="fs-6 fst-italic text-secondary">
-            Developed by
-            <!-- GITHUB LINK -->
-          </span>
-          <a
-            class="text-decoration-none text-secondary border-bottom mx-1 px-1"
-            href="https://github.com/ana-fg"
-            target="_blank"
-          >
-            Ana
-          </a>
-          <a
-            class="text-decoration-none text-secondary border-bottom mx-1 px-1"
-            href="https://github.com/18pingu18"
-            target="_blank"
-          >
-            Edo
-          </a>
-          <a
-            class="text-decoration-none text-secondary border-bottom mx-1 px-1"
-            href="https://www.maxdev.live/"
-            target="_blank"
-          >
-            Maxim
-          </a>
-        </div>
-      </div>
-    </footer>
+    <footer class="bg-dark p-1 mt-5 position-absolute bottom-0 w-100">
+          <div class="container text-light text-center">
+            <h3 class="bg-dark p-1 mt-5">SIGA-NOS NAS REDES SOCIAIS</h3>
+            <a class="socialMedia" href="#">
+              <img src="../img/facebook.png" alt="Facebook" />
+            </a>
+            <a class="socialMedia" href="#">
+              <img src="../img/instagram.png" alt="Instagram" />
+            </a>
+      
+            <p class="text-white-50">Termos de Uso | Política de Privacidade</p>
+            <div class="developersTeam">
+              <span class="fs-6 fst-italic text-secondary">
+                Developed by
+                <!-- GITHUB LINK -->
+              </span>
+              <a
+                class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+                href="https://github.com/ana-fg"
+                target="_blank"
+              >
+                Ana
+              </a>
+              <a
+                class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+                href="https://github.com/18pingu18"
+                target="_blank"
+              >
+                Edo
+              </a>
+              <a
+                class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+                href="https://www.maxdev.live/"
+                target="_blank"
+              >
+                Maxim
+              </a>
+            </div>
+          </div>
+        </footer>
 
     <script src="../script/loja.js"></script>
 
