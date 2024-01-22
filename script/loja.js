@@ -30,7 +30,7 @@ const loadItems = (data) => {
     });
 }
 
-$(document).ready(() => {
+const fetchProducts = () => {
     $('.card-container').empty();
 
     let allProducts;
@@ -50,13 +50,16 @@ $(document).ready(() => {
     }).fail(function (err) {
         console.log(err);
     });
+}
+
+$(document).ready(() => {
+    fetchProducts();
 });
 
 
 // PAGE LOADING
 $(document).ready(function () {
     let allProducts;
-
     $.ajax({
         url: '../data/shopItems.json',
         dataType: 'json',
@@ -85,20 +88,6 @@ $(document).ready(function () {
             filteredProducts = allProducts.filter(item => item.category === selectedCategory);
 
         loadItems(filteredProducts);
-    });
-    $('.itemCard').each(function(index) {
-        // Find the comprar button and product quantity input within the current card
-        const comprarButton = $(this).find('.comprarItems');
-        const quantityInput = $(this).find('.productQuantity');
-
-        // Attach a click event handler to the comprar button
-        comprarButton.on('click', function() {
-            // Get the quantity from the associated input within the clicked card
-            const quantity = quantityInput.val();
-            
-            // Use the quantity as needed (for example, log it to the console)
-            console.log('Card ' + (index + 1) + ' Quantity: ' + quantity);
-        });
     });
     $('.card-container').on('click', '.comprarItems', function() {
         const item = $(this).closest('.card');
