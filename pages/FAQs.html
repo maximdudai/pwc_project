@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetCar - FAQs</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+  </head>
+  <body>
+    <nav
+      id="cabecalho"
+      class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient px-3 mb-3"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex" href="index.html">
+          <img
+            class="logo rounded-5 p-2"
+            src="../img/logo.jpg"
+            height="60"
+            alt="Logotipo"
+          />
+          <p class="d-flex flex-column">
+            <span class="border-top-1 text-uppercase">PetCare</span>
+            <span class="text-secondary">Adotar um animal</span>
+          </p>
+        </a>
+
+        <button
+          class="navbar-toggler p-1"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-flex-lg justify-content-lg-end align-items-lg-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <ul class="navbar-nav ms-auto grid gap-1 w-100">
+              <li class="nav-item w-100 px-lg-1">
+                <a
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="../index.html"
+                  role="button"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="nav-item w-100 px-lg-1">
+                <a
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="sobreNos.html"
+                  role="button"
+                >
+                  Sobre Nós
+                </a>
+              </li>
+              <li class="nav-item w-100 px-lg-1">
+                <a
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="loja.html"
+                  role="button"
+                >
+                  Loja
+                </a>
+              </li>
+              <!-- ETAPA 1 -->
+              <li class="nav-item w-100 px-lg-1">
+                <a
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="caesAdocao.html"
+                  role="button"
+                >
+                  Cães para adoção
+                </a>
+              </li>
+              <li class="nav-item w-100 px-lg-1">
+                <a
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="adotar.html"
+                  role="button"
+                >
+                  Adotar
+                </a>
+              </li>
+              <li class="nav-item w-100 px-lg-1">
+                <a
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="favoritos.html"
+                  role="button"
+                >
+                  Favoritos
+                </a>
+              </li>
+              <li class="nav-item w-100 px-lg-1">
+                <a
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="contactos.html"
+                  role="button"
+                >
+                  Contactos
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="btn-group w-100" role="group">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light w-100 my-md-1 active"
+                    aria-expanded="false"
+                  >
+                    FAQs
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container faqContent">
+      <div class="faqTitle d-flex align-items-center">
+        <h2 class="faqTitleContent">Perguntar Frequentes (FAQ)</h2>
+
+        <img
+          class="defesaImage img-fluid"
+          src="../img/defesa.png"
+          alt="Title Image"
+        />
+      </div>
+
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Devo adotar um animal?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <h5 class="mb-3">Algumas considerações a ter/analisar:</h5>
+
+              <ul>
+                <li>
+                  <div class="accordionTitle text-primary">
+                    Está na disposição de suportar os imprevistos de ter um
+                    animal de estimação?
+                  </div>
+                  <div class="accordionConent">
+                    Devemos estar preparados para incidentes, como mobílias
+                    riscadas, objetos estragados ou mordidos, para emergências
+                    veterinárias, ou que urinem fora do local adequado (se não
+                    estão educados, por marcação do território, ou por
+                    distúrbios de saúde).
+                  </div>
+                </li>
+                <li>
+                  <div class="accordionTitle text-primary">
+                    Toda a família concorda com a adoção do animal?
+                  </div>
+                  <div class="accordionConent">
+                    Todo o agregado familiar tem interesse em adotar um animal
+                    de companhia, e estão dispostos de um modo ou de outro a
+                    participar nos cuidados de educação, higiene, alimentação,
+                    etc.? Assegure-se que há adultos disponíveis para cuidar do
+                    animal, essa tarefa não deve nunca ser exclusivamente da
+                    responsabilidade das crianças. Deve ainda certificar-se que
+                    estão todos de acordo com o tipo de animal a escolher.
+                  </div>
+                </li>
+                <li>
+                  <div class="accordionTitle text-primary">
+                    Quanto tempo por dia vai poder dedicar ao seu animal?
+                  </div>
+                  <div class="accordionConent">
+                    Ter um animal de companhia implica ter disponibilidade de
+                    tempo para alimentá-lo, levá-lo a passear (no caso de optar
+                    por um cão), prestar-lhe cuidados de higiene, educá-lo e
+                    fazer-lhe companhia todos os dias. No caso do cão, ele deve
+                    ser passeado todos os dias, para que se possa exercitar e
+                    socializar com outros cães, e adaptar-se a pessoas e ruídos
+                    do exterior que não esteja habituado. O mais importante do
+                    passeio será o tempo que vai partilhar consigo, e que lhe
+                    vai ajudar a fortalecer os laços da vossa amizade.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Como contactar as autoridades para denunciar maus-tratos ou ajudar
+              animais em risco?
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li class="my-3">
+                  A PSP criou o email defesanimal@psp.pt para denúncias de maus
+                  tratos a animais.
+                </li>
+                <li class="my-3">
+                  As denúncias à PSP podem também ser feitas para o número de
+                  telefone 217 654 242
+                </li>
+                <li class="my-3">
+                  A GNR criou o SEPNA - Serviço da Proteção da Natureza e do
+                  Ambiente, um serviço através do qual se pode contactar
+                  diretamente as autoridades que poderão agir em casos de
+                  abandono, maus tratos ou outros flagelos contra os animais ou
+                  a natureza.
+                </li>
+                <li class="my-3">
+                  Podem ser efetuadas denúncias por email para sepna@gnr.pt.
+                </li>
+                <li class="my-3">
+                  Através deste formulário online:
+                  <a href="https://www.gnr.pt/ambiente.aspx"
+                    >https://www.gnr.pt/ambiente.aspx</a
+                  >
+                </li>
+                <li class="my-3">
+                  Através do atendimento telefónico SOS Ambiente e Território,
+                  disponível 24 horas por dia durante todo o ano:
+                  <a href="tel:+351808200520">808 200 520</a>
+                </li>
+                <li class="my-3">
+                  No posto de GNR mais próximo ou através dos contactos listados
+                  em:
+                  <a href="https://www.gnr.pt/contactos.aspx"
+                    >https://www.gnr.pt/contactos.aspx</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Que outras organizações de proteção de animais existem?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li class="my-3">
+                  <strong class="mb-5"
+                    >SIAC - Sistema de Informação de Animais de
+                    Companhia:</strong
+                  >
+                  <p>
+                    <a href="https://siac.vet/">https://siac.vet/</a>
+                  </p>
+                </li>
+                <li class="my-3">
+                  <strong class="mb-5">Liberta-me:</strong>
+                  <p>
+                    <a href="http://www.liberta-me.org/"
+                      >http://www.liberta-me.org/</a
+                    >
+                  </p>
+                </li>
+                <li class="my-3">
+                  <strong class="mb-5">Animais de Rua:</strong>
+                  <p>
+                    <a href="http://www.animaisderua.org/"
+                      >http://www.animaisderua.org/</a
+                    >
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -39,3 +39,21 @@
   height: 10rem;
   margin-top: 5px;
 }
+
+/* DEFESA */
+.defesaImage {
+  max-width: 5rem;
+  height: 5rem;
+}
+.faqContent {
+  font-family: "Lucida Console", Courier, monospace;
+}
+.faqTitleContent {
+  margin: auto;
+}
+.accordion {
+  background: #7dc197;
+}
+.accordionTitle {
+  color: #007fff;
+}

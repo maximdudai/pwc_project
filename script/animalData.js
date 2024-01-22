@@ -4,7 +4,7 @@ const animalCard = $('.animalCard');
 const API_LINK = "https://api.petfinder.com/v2/animals";
 const apiConfig = {
   API_LINK: "https://api.petfinder.com/v2/animals",
-  Authorization: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJXQkhVc2RwcG4yaFg2enMxN3ZRa01Jb2w5OFlJeEhXSVhlVDFKbjY1VEE1U0tkNWYxZyIsImp0aSI6IjIyMzM0MjEzMWM1MDQzNTZjNTQwMTA5ZTQ4MGEwYTBkY2YyOGE1MjE5YzcyYmY3MDM4NzYwNjIzMTdhYjBlYWEwODRhZjhiZDJmNDI3OTlhIiwiaWF0IjoxNzA1OTQ5MjY5LCJuYmYiOjE3MDU5NDkyNjksImV4cCI6MTcwNTk1Mjg2OSwic3ViIjoiIiwic2NvcGVzIjpbXX0.Vaam4AfGz2Vlfc_rdUTSlbtp-oZVY8uR3HxoqUYnH8izJQWuar4XPFUk0Q5VkJpwGcZuThNaP9T_2_-e2QIq4gX-IUy_tn_3M11bLTtm-XU3NqFDPPg5XLAEog0-U5zmOuKLkmNPJNM2wMaLDSaZpiiMI-QSjxbI8BLLKYFA4zFFjzigD92Qcq8OW_b3aExYdvMtyvyZqNyG58gUAG-IvPMQsomrDKoHKj4jkv-oCC4600cTU7iAMm6JCAyx0uWcNigZ_pKbmOxPxyKxa4Mj1tZSxudNKEj-CV2IBWN8IuWtGzOZF1dlc0exqVCqb08ParIGDojxpugzshId6a2iXg",
+  Authorization: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmUURFVmZScGtsS3JteDZMOTZUN3EwcWpuYUxXQ0hZd0dyTmxXOWt4VlFRQUlnS1NKZiIsImp0aSI6ImYwMTk5OTBlNWNjMzA3ZjI4NjQyNzQ1MWRkZDgxZTA3OGJiZjk3ZWM1NmM2MDc2MDJlN2I3NGE4ZDNhMmZmMGQ2ZGM1NDk5YTQ3Mzc4ZTg5IiwiaWF0IjoxNzA1OTUyMzUzLCJuYmYiOjE3MDU5NTIzNTMsImV4cCI6MTcwNTk1NTk1Mywic3ViIjoiIiwic2NvcGVzIjpbXX0.q3gGUx3xET-S_Dm9gou65p-wuQt-PBJAX6ycVszEekw-QQZ9ZSoStHoum6QVTGOFh5PMro17E6IE0HYRVu5tu6uESbB9OE0dI2fV5SCueey28wDZOwCwan8bvRqvHUE8AfsldRSDODruA9pjrkyyBEIUakra4jsT8bIeRFYZj0NBu5emBEEPFccET4ebEv0044Zafk62alVqeatlvhpPLHcQKz6qW6qS4pkyB6pzM9Ct98_KFWXp9NkyQCb76-EmwBKi4vAftsDUAGVS46la3FX-kNLH7x1votu2GXjMMZ4ICyHXQoUV6KVqt8vxULSiPdTqb2CaQWmWsYYl9U5Maw",
   limitData: 10
 }
 
@@ -12,7 +12,6 @@ const createAnimalCard = (index, photos, name, age) => {
   const card = animalCard?.clone();
   const Poster = photos[0]?.small || "https://cdn.vectorstock.com/i/preview-1x/82/99/no-image-available-like-missing-picture-vector-43938299.jpg";
 
-  console.log(index, photos, name, age);
 
   $(card).find('.maisDetalhes').prop('id', index);
 
@@ -25,7 +24,8 @@ const createAnimalCard = (index, photos, name, age) => {
 
 
 const loadAnimalsContainer = (data) => {
-  const cardContainer = $('#availableAnimails');
+  const cardContainer = $('#availableAnimals');
+  cardContainer.empty();
   let cardDiv;
 
   $.each(data, function (_, value) {
@@ -35,7 +35,7 @@ const loadAnimalsContainer = (data) => {
 };
 
 const loadAnimalsData = () => {
-  $('#availableAnimails').empty();
+  $('#availableAnimals').empty();
 
   let loadedAnimals;
   $.ajax({
@@ -46,7 +46,6 @@ const loadAnimalsData = () => {
     },
     success: function (data) {
       loadedAnimals = data.animals;
-      console.log(loadedAnimals);
       loadAnimalsContainer(loadedAnimals);
     },
     error: function (error) {
@@ -69,7 +68,9 @@ const showAnimalData = (data) => {
 
   const name = data?.name || "Sem nome";
   const age = data?.age || "Sem idade";
-  const attributos = data?.attributes || "Sem atributos";
+
+  const attributos = data?.attributes || [];
+
   const description = data?.description || "Sem descrição";
   const gender = data?.gender || "Sem gênero";
   const size = data?.size || "Sem tamanho";
@@ -78,11 +79,15 @@ const showAnimalData = (data) => {
 
 
   const attributosLista = modal.find('.animalAttributos');
-  $.each(attributos, function (key, value) {
-    const listItem = $('<li></li>');
-    listItem.text(`${key}: ${value === null ? 'N/A' : !value ? 'Não' : 'Sim'}`);
-    attributosLista.append(listItem);
-  });
+
+  if (attributos.length > 0) {
+    $.each(attributos, function (key, value) {
+      const listItem = $('<li></li>');
+      listItem.text(`${key}: ${value === null ? 'N/A' : !value ? 'Não' : 'Sim'}`);
+      attributosLista.append(listItem);
+    });
+  }
+
 
   modal.find('.animalName').text(name);
   modal.find('.animalAge').text(age);
@@ -113,5 +118,50 @@ const getAnimalData = (id) => {
   }).fail(function (err) {
     console.log(err);
   });
-
 }
+
+const filterAnimals = () => {
+
+  let coatString = '';
+  let ageString = '';
+  let genderString = '';
+
+  let loadedAnimal = [];
+
+
+  const coatData = $('#coatData').val();
+  const ageData = $('#ageData').val();
+  const genderData = $('#genderData').val();
+
+  if (coatData) {
+    coatString += `coat=${coatData || null}`;
+  }
+  if (ageData) {
+    ageString += `age=${ageData || null}`;
+  }
+  if (genderData) {
+    genderString += `gender=${genderData || null}`;
+  }
+
+  $.ajax({
+    url: apiConfig.API_LINK + '?' + coatString + '&' + ageString + '&' + genderString + '&limit=' + apiConfig.limitData,
+    method: 'GET',
+    headers: {
+      'Authorization': 'Bearer ' + apiConfig.Authorization,
+    },
+    success: function (data) {
+      loadedAnimal = data.animals;
+      loadAnimalsContainer(loadedAnimal);
+    },
+    error: function (error) {
+      console.error('Error fetching data:', error);
+    }
+  }).fail(function (err) {
+    console.log(err);
+  });
+
+};
+
+$(document).ready(() => {
+  $('#filterAnimals').on('click', () => filterAnimals());
+});

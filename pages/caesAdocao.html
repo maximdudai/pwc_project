@@ -190,29 +190,40 @@
 
               <div class="row gap-1 gap-md-0">
                 <div class="col-md-3">
-                  <select class="form-select" aria-label="Tipo">
-                    <option selected>Tipo</option>
-                    <option value="1">Gato</option>
-                    <option value="2">Cão</option>
+                  <select class="form-select" id="coatData" aria-label="Tipo">
+                    <option class="text-secondary" selected value="">Coat</option>
+                    <option value="short">Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                    <option value="wire">Wire</option>
+                    <option value="hairless">Hairless</option>
+                    <option value="curly">Curly</option>
                   </select>
                 </div>
                 <div class="col-md-3">
-                  <select class="form-select" aria-label="Idade">
-                    <option selected>Idade</option>
-                    <option value="1">Jovem</option>
-                    <option value="2">Adulto</option>
+                  <select class="form-select" id="ageData" aria-label="Idade">
+                    <option selected value="">Idade</option>
+                    <option value="baby">Baby</option>
+                    <option value="young">Young</option>
+                    <option value="adult">Adult</option>
+                    <option value="senior">Senior</option>
                   </select>
                 </div>
                 <div class="col-md-3">
-                  <select class="form-select" aria-label="Sexo">
-                    <option selected>Sexo</option>
-                    <option value="1">Macho</option>
-                    <option value="2">Fêmea</option>
+                  <select class="form-select" id="genderData" aria-label="Sexo">
+                    <option selected value="">Sexo</option>
+                    <option value="male">Macho</option>
+                    <option value="female">Fêmea</option>
+                    <option value="unknown">Unknown</option>
                   </select>
+                </div>
+
+                <div class="col-md-3">
+                  <button id="filterAnimals" class="btn btn-outline-warning">Filtrar</button>
                 </div>
               </div>
 
-              <div class="row" id="availableAnimails">
+              <div class="row" id="availableAnimals">
                 <div class="col-sm-4 col-md-4 my-1 animalCard">
                   <div class="card">
                     <div
