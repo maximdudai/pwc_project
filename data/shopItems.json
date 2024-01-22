@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "imageUrl": "https://1371272303.rsc.cdn77.org/temp/1697478369_3b85be508cdf08937a96383ad6cf1f24.jpg",
+      "productName": "Rações",
+      "category": "1",
+      "currentPrice": "25",
+      "originalPrice": "50"
+    },
+    {
+      "id": "2",
+      "imageUrl": "https://granjadecister.pt/1643-large_default/racao-cao-avenal-caca-20kg.jpg",
+      "productName": "Rações",
+      "category": "1",
+      "currentPrice": "35",
+      "originalPrice": "60"
+    },
+    {
+      "id": "3",
+      "imageUrl": "https://www.worten.pt/i/40b0b13fd795a95f27be3de759622bfb1268b9b3",
+      "productName": "Brinquedo",
+      "category": "2",
+      "currentPrice": "10",
+      "originalPrice": "30"
+    },
+    {
+      "id": "4",
+      "imageUrl": "https://caoemcompanhia.com.br/wp-content/uploads/2016/11/brinquedo-cachorro.jpg",
+      "productName": "Brinquedo",
+      "category": "2",
+      "currentPrice": "20",
+      "originalPrice": "50"
+    },
+    {
+      "id": "5",
+      "imageUrl": "https://www.zooplus.pt/magazine/wp-content/uploads/2019/08/top-10-verao-768x511.jpg",
+      "productName": "Acessórios",
+      "category": "3",
+      "currentPrice": "14",
+      "originalPrice": "39"
+    },
+    {
+      "id": "6",
+      "imageUrl": "https://www.petz.com.br/blog/wp-content/uploads/2021/04/fantasia-para-caes.jpg",
+      "productName": "Acessórios",
+      "category": "3",
+      "currentPrice": "20",
+      "originalPrice": "49"
+    }
+  ]
+}

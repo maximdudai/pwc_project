@@ -28,7 +28,6 @@
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
   </head>
   <body>
-
     <!--Cabecalho-->
     <nav
       id="cabecalho"
@@ -38,7 +37,7 @@
         <a class="navbar-brand d-flex" href="index.html">
           <img
             class="logo rounded-5 p-2"
-            src="../img/logo.jpg"
+            src="img/logo.jpg"
             height="60"
             alt="Logotipo"
           />
@@ -49,7 +48,7 @@
         </a>
 
         <button
-          class="navbar-toggler"
+          class="navbar-toggler p-1"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -60,88 +59,90 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
-          class="collapse navbar-collapse d-flex justify-content-center justify-content-lg-end"
+          class="collapse navbar-collapse d-flex-lg justify-content-lg-end align-items-lg-center"
           id="navbarNav"
         >
           <ul
-            class="nav nav-pills d-flex flex-column flex-lg-row justify-content-center align-content-center gap-1"
+            class="navbar-nav"
           >
-            <ul class="navbar-nav ms-auto grid gap-1">
-              <li class="nav-item">
-                <a
-                  class="btn btn-outline-secondary w-100"
-                  href="../index.html"
-                  role="button"
+            <li class="nav-item dropdown">
+              <div class="btn-group w-100" role="group">
+                <button
+                  type="button"
+                  class="btn btn-outline-light dropdown-toggle w-100 my-md-1 active"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
                   Home
-                </a>
-              </li>
-              <li class="nav-item">
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#animalsGallery">Imagem</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#companyGoals">Objetivos</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#frequentlyQuestions"
+                      >Questões Frequentes</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <ul class="navbar-nav ms-auto grid gap-1 w-100">
+              <li class="nav-item w-100 px-lg-1">
                 <a
-                  class="btn btn-outline-secondary w-100"
-                  href="sobreNos.html"
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="pages/sobreNos.html"
                   role="button"
                 >
                   Sobre Nós
                 </a>
               </li>
-              <li class="nav-item dropdown">
-                <div class="btn-group" role="group">
-                  <button
-                    type="button"
-                    class="btn btn-outline-light dropdown-toggle active"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Loja
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#availableAnimals"
-                        >Animais</a
-                      >
-                    </li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li>
-                      <a class="dropdown-item" href="#specificAnimal"
-                        >Mais Detalhes</a
-                      >
-                    </li>
-                  </ul>
-                </div>
+              <li class="nav-item w-100 px-lg-1">
+                <a
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="pages/loja.html"
+                  role="button"
+                >
+                  Loja
+                </a>
               </li>
               <!-- ETAPA 1 -->
-              <li class="nav-item">
+              <li class="nav-item w-100 px-lg-1">
                 <a
-                  class="btn btn-outline-secondary w-100 disabled"
-                  href="caesAdocao.html"
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="pages/caesAdocao.html"
                   role="button"
                 >
                   Cães para adoção
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item w-100 px-lg-1">
                 <a
-                  class="btn btn-outline-secondary w-100"
-                  href="adotar.html"
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="pages/adotar.html"
                   role="button"
                 >
                   Adotar
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item w-100 px-lg-1">
                 <a
-                  class="btn btn-outline-secondary w-100"
-                  href="favoritos.html"
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="pages/favoritos.html"
                   role="button"
                 >
                   Favoritos
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item w-100 px-lg-1">
                 <a
-                  class="btn btn-outline-secondary w-100"
-                  href="contactos.html"
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="pages/contactos.html"
                   role="button"
                 >
                   Contactos
@@ -192,10 +193,11 @@
 
               <div class="row my-3 gap-1 gap-md-0">
                 <div class="col-md-3">
-                  <select class="form-select" aria-label="Tipo">
-                    <option selected>Tipo Do Produto</option>
+                  <select class="form-select" id="productType" aria-label="Tipo">
+                    <option value="0" selected>Tipo Do Produto</option>
                     <option value="1">Rações</option>
                     <option value="2">Brinquedos</option>
+                    <option value="3">Acessorios</option>
                   </select>
                 </div>
                 <div class="col-md-3">
@@ -206,292 +208,51 @@
                   </select>
                 </div>
                 <div class="col-md-3">
-                  <button class="btn btn-outline-warning">Filtrar</button>
+                  <button class="btn btn-outline-warning" id="filterItems">Filtrar</button>
                 </div>
               </div>
 
-              <div class="row" id="availableItems">
-                <div class="col-sm-4 col-md-4 my-3">
-                  <div class="card">
-                    <img
-                      src="https://1605671551.rsc.cdn77.org/temp/1697477964_014deece45bfd8d06db3abeb1c23f33a.jpg"
-                      class="lojaCardBanner card-img-top"
-                      alt="Product Image"
-                    />
-                    <div class="card-body">
-                      <div class="card-text d-flex flex-column">
-                        <span class="animalNameTitle text-secondary"
-                          >Produto</span
-                        >
-                        <span class="animalNameContent">Rações</span>
+              <div class="row card-container" id="availableItems">
+                <div class="card col-md-4 my-1 itemCard">
+                  <img
+                    src=""
+                    class="lojaCardBanner card-img-top img-fluid"
+                    alt="Product Image"
+                  />
+                  <div class="card-body">
+                    <div class="card-text d-flex flex-column">
+                      <span class="animalNameTitle text-secondary">Produto</span>
+                      <span class="animalNameContent"></span>
+                    </div>
+            
+                    <div class="card-text mt-1 d-flex flex-column">
+                      <p class="animalNameTitle text-secondary">Preço</p>
+                      <div class="animalPriceData">
+                        <s class="reducedPrice text-secondary">24 €</s>
+                        <span class="currentPrice text-danger">25 €</span>
                       </div>
-
-                      <div class="card-text mt-1 d-flex flex-column">
-                        <p class="animalNameTitle text-secondary">Preço</p>
-                        <p class="animalNameContent">
-                          <s class="reducedPrice text-secondary">€2,99</s>
-                          <span class="currentPrice text-danger">€1,99</span>
-                        </p>
+                    </div>
+            
+                    <div class="row">
+                      <div class="col-md-5">
+                        <button class="btn btn-outline-danger my-1 comprarItems">Comprar</button>
                       </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                          <button
-                            class="btn btn-outline-danger my-sm-1 my-md-0"
-                          >
-                            Comprar
-                          </button>
-                        </div>
-
-                        <div class="col-md-auto mb-3">
-                          <input
-                            id="productQuantity"
-                            placeholder="Quantidade"
-                            type="number"
-                            min="1"
-                            class="form-control"
-                            aria-describedby="productQuantity"
-                          />
-                        </div>
+                      <div class="col-md-auto mb-3">
+                        <input
+                          id="productQuantity"
+                          placeholder="Quantidade"
+                          type="number"
+                          min="1"
+                          class="form-control"
+                          aria-describedby="productQuantity"
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-sm-4 col-md-4 my-3">
-                  <div class="card">
-                    <img
-                      src="https://m.media-amazon.com/images/I/61-1O+RDilS._AC_UF1000,1000_QL80_.jpg"
-                      class="lojaCardBanner card-img-top"
-                      alt="Product Image"
-                    />
-                    <div class="card-body">
-                      <div class="card-text d-flex flex-column">
-                        <span class="animalNameTitle text-secondary"
-                          >Produto</span
-                        >
-                        <span class="animalNameContent">Brinquedo</span>
-                      </div>
-
-                      <div class="card-text mt-1 d-flex flex-column">
-                        <p class="animalNameTitle text-secondary">Preço</p>
-                        <p class="animalNameContent">
-                          <s class="reducedPrice text-secondary">€2,99</s>
-                          <span class="currentPrice text-danger">€1,99</span>
-                        </p>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                          <button
-                            class="btn btn-outline-danger my-sm-1 my-md-0"
-                          >
-                            Comprar
-                          </button>
-                        </div>
-
-                        <div class="col-md-auto mb-3">
-                          <input
-                            id="productQuantity"
-                            placeholder="Quantidade"
-                            type="number"
-                            min="1"
-                            class="form-control"
-                            aria-describedby="productQuantity"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="col-sm-4 col-md-4 my-3">
-                  <div class="card">
-                    <img
-                      src="https://1605671551.rsc.cdn77.org/temp/1697477964_014deece45bfd8d06db3abeb1c23f33a.jpg"
-                      class="lojaCardBanner card-img-top"
-                      alt="Product Image"
-                    />
-                    <div class="card-body">
-                      <div class="card-text d-flex flex-column">
-                        <span class="animalNameTitle text-secondary"
-                          >Produto</span
-                        >
-                        <span class="animalNameContent">Rações</span>
-                      </div>
-
-                      <div class="card-text mt-1 d-flex flex-column">
-                        <p class="animalNameTitle text-secondary">Preço</p>
-                        <p class="animalNameContent">
-                          <s class="reducedPrice text-secondary">€2,99</s>
-                          <span class="currentPrice text-danger">€1,99</span>
-                        </p>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                          <button
-                            class="btn btn-outline-danger my-sm-1 my-md-0"
-                          >
-                            Comprar
-                          </button>
-                        </div>
-
-                        <div class="col-md-auto mb-3">
-                          <input
-                            id="productQuantity"
-                            placeholder="Quantidade"
-                            type="number"
-                            min="1"
-                            class="form-control"
-                            aria-describedby="productQuantity"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-4 col-md-4 my-3">
-                  <div class="card">
-                    <img
-                      src="https://m.media-amazon.com/images/I/61-1O+RDilS._AC_UF1000,1000_QL80_.jpg"
-                      class="lojaCardBanner card-img-top"
-                      alt="Product Image"
-                    />
-                    <div class="card-body">
-                      <div class="card-text d-flex flex-column">
-                        <span class="animalNameTitle text-secondary"
-                          >Produto</span
-                        >
-                        <span class="animalNameContent">Brinquedo</span>
-                      </div>
-
-                      <div class="card-text mt-1 d-flex flex-column">
-                        <p class="animalNameTitle text-secondary">Preço</p>
-                        <p class="animalNameContent">
-                          <s class="reducedPrice text-secondary">€2,99</s>
-                          <span class="currentPrice text-danger">€1,99</span>
-                        </p>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                          <button
-                            class="btn btn-outline-danger my-sm-1 my-md-0"
-                          >
-                            Comprar
-                          </button>
-                        </div>
-
-                        <div class="col-md-auto mb-3">
-                          <input
-                            id="productQuantity"
-                            placeholder="Quantidade"
-                            type="number"
-                            min="1"
-                            class="form-control"
-                            aria-describedby="productQuantity"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-md-4 my-3">
-                  <div class="card">
-                    <img
-                      src="https://1605671551.rsc.cdn77.org/temp/1697477964_014deece45bfd8d06db3abeb1c23f33a.jpg"
-                      class="lojaCardBanner card-img-top"
-                      alt="Product Image"
-                    />
-                    <div class="card-body">
-                      <div class="card-text d-flex flex-column">
-                        <span class="animalNameTitle text-secondary"
-                          >Produto</span
-                        >
-                        <span class="animalNameContent">Rações</span>
-                      </div>
-
-                      <div class="card-text mt-1 d-flex flex-column">
-                        <p class="animalNameTitle text-secondary">Preço</p>
-                        <p class="animalNameContent">
-                          <s class="reducedPrice text-secondary">€2,99</s>
-                          <span class="currentPrice text-danger">€1,99</span>
-                        </p>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                          <button
-                            class="btn btn-outline-danger my-sm-1 my-md-0"
-                          >
-                            Comprar
-                          </button>
-                        </div>
-
-                        <div class="col-md-auto mb-3">
-                          <input
-                            id="productQuantity"
-                            placeholder="Quantidade"
-                            type="number"
-                            min="1"
-                            class="form-control"
-                            aria-describedby="productQuantity"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-4 col-md-4 my-3">
-                  <div class="card">
-                    <img
-                      src="https://m.media-amazon.com/images/I/61-1O+RDilS._AC_UF1000,1000_QL80_.jpg"
-                      class="lojaCardBanner card-img-top"
-                      alt="Product Image"
-                    />
-                    <div class="card-body">
-                      <div class="card-text d-flex flex-column">
-                        <span class="animalNameTitle text-secondary"
-                          >Produto</span
-                        >
-                        <span class="animalNameContent">Brinquedo</span>
-                      </div>
-
-                      <div class="card-text mt-1 d-flex flex-column">
-                        <p class="animalNameTitle text-secondary">Preço</p>
-                        <p class="animalNameContent">
-                          <s class="reducedPrice text-secondary">€2,99</s>
-                          <span class="currentPrice text-danger">€1,99</span>
-                        </p>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                          <button
-                            class="btn btn-outline-danger my-sm-1 my-md-0"
-                          >
-                            Comprar
-                          </button>
-                        </div>
-
-                        <div class="col-md-auto mb-3">
-                          <input
-                            id="productQuantity"
-                            placeholder="Quantidade"
-                            type="number"
-                            min="1"
-                            class="form-control"
-                            aria-describedby="productQuantity"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
+
             </div>
           </div>
 
@@ -548,7 +309,7 @@
             </div>
             <div class="col-12 col-md-6">
               <img
-                class="rounded-2 shadow"
+                class="rounded-2 shadow img-fluid"
                 src="https://st2.depositphotos.com/1032808/8599/i/450/depositphotos_85998328-stock-photo-group-of-pets.jpg"
                 alt="Grupo de Animais"
               />
@@ -600,8 +361,6 @@
       </div>
     </footer>
 
-    <script src="../script/loja.js"></script>
-
     <!-- jQuery -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -615,5 +374,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script type="module" src="../script/loja.js"></script>
   </body>
 </html>

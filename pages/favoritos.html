@@ -37,7 +37,7 @@
         <a class="navbar-brand d-flex" href="index.html">
           <img
             class="logo rounded-5 p-2"
-            src="../img/logo.jpg"
+            src="img/logo.jpg"
             height="60"
             alt="Logotipo"
           />
@@ -48,7 +48,7 @@
         </a>
 
         <button
-          class="navbar-toggler"
+          class="navbar-toggler p-1"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -59,86 +59,88 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
-          class="collapse navbar-collapse d-flex justify-content-center justify-content-lg-end"
+          class="collapse navbar-collapse d-flex-lg justify-content-lg-end align-items-lg-center"
           id="navbarNav"
         >
-          <ul
-            class="nav nav-pills d-flex flex-column flex-lg-row justify-content-center align-content-center gap-1"
-          >
-            <ul class="navbar-nav ms-auto grid gap-1">
-              <li class="nav-item">
-                <a
-                  class="btn btn-outline-secondary w-100"
-                  href="../index.html"
-                  role="button"
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <div class="btn-group w-100" role="group">
+                <button
+                  type="button"
+                  class="btn btn-outline-light dropdown-toggle w-100 my-md-1 active"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
                   Home
-                </a>
-              </li>
-              <li class="nav-item">
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#animalsGallery">Imagem</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#companyGoals">Objetivos</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#frequentlyQuestions"
+                      >Questões Frequentes</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <ul class="navbar-nav ms-auto grid gap-1 w-100">
+              <li class="nav-item w-100 px-lg-1">
                 <a
-                  class="btn btn-outline-secondary w-100"
-                  href="sobreNos.html"
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="pages/sobreNos.html"
                   role="button"
                 >
                   Sobre Nós
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item w-100 px-lg-1">
                 <a
-                  class="btn btn-outline-secondary w-100"
-                  href="loja.html"
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="pages/loja.html"
                   role="button"
                 >
                   Loja
                 </a>
               </li>
               <!-- ETAPA 1 -->
-              <li class="nav-item">
+              <li class="nav-item w-100 px-lg-1">
                 <a
-                  class="btn btn-outline-secondary w-100 disabled"
-                  href="caesAdocao.html"
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="pages/caesAdocao.html"
                   role="button"
                 >
                   Cães para adoção
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item w-100 px-lg-1">
                 <a
-                  class="btn btn-outline-secondary w-100"
-                  href="adotar.html"
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="pages/adotar.html"
                   role="button"
                 >
                   Adotar
                 </a>
               </li>
-              </ul>
-              <li class="nav-item dropdown">
-                <div class="btn-group" role="group">
-                  <button
-                    type="button"
-                    class="btn btn-outline-light dropdown-toggle active"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                  Favoritos
-                  </button>
-                </ul>
-                  <ul class="dropdown-menu">
-                    <!--li>
-                      <a class="dropdown-item" href="#availableAnimals"
-                        >Animais</a
-                      >
-                    </li>
-                    <li><hr class="dropdown-divider" /></li-->
-                  </ul>
-                </div>
-              </li>
-              <ul class="navbar-nav ms-auto grid gap-1">
-              <li class="nav-item">
+              <li class="nav-item w-100 px-lg-1">
                 <a
-                  class="btn btn-outline-secondary w-100"
-                  href="contactos.html"
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="pages/favoritos.html"
+                  role="button"
+                >
+                  Favoritos
+                </a>
+              </li>
+              <li class="nav-item w-100 px-lg-1">
+                <a
+                  class="btn btn-outline-secondary w-100 text-nowrap my-md-1"
+                  href="pages/contactos.html"
                   role="button"
                 >
                   Contactos
@@ -231,45 +233,45 @@
 
     <!--Rodape-->
     <footer class="bg-dark p-1 mt-5 position-absolute bottom-0 w-100">
-          <div class="container text-light text-center">
-            <h3 class="bg-dark p-1 mt-5">SIGA-NOS NAS REDES SOCIAIS</h3>
-            <a class="socialMedia" href="#">
-              <img src="../img/facebook.png" alt="Facebook" />
-            </a>
-            <a class="socialMedia" href="#">
-              <img src="../img/instagram.png" alt="Instagram" />
-            </a>
-      
-            <p class="text-white-50">Termos de Uso | Política de Privacidade</p>
-            <div class="developersTeam">
-              <span class="fs-6 fst-italic text-secondary">
-                Developed by
-                <!-- GITHUB LINK -->
-              </span>
-              <a
-                class="text-decoration-none text-secondary border-bottom mx-1 px-1"
-                href="https://github.com/ana-fg"
-                target="_blank"
-              >
-                Ana
-              </a>
-              <a
-                class="text-decoration-none text-secondary border-bottom mx-1 px-1"
-                href="https://github.com/18pingu18"
-                target="_blank"
-              >
-                Edo
-              </a>
-              <a
-                class="text-decoration-none text-secondary border-bottom mx-1 px-1"
-                href="https://www.maxdev.live/"
-                target="_blank"
-              >
-                Maxim
-              </a>
-            </div>
-          </div>
-        </footer>
+      <div class="container text-light text-center">
+        <h3 class="bg-dark p-1 mt-5">SIGA-NOS NAS REDES SOCIAIS</h3>
+        <a class="socialMedia" href="#">
+          <img src="../img/facebook.png" alt="Facebook" />
+        </a>
+        <a class="socialMedia" href="#">
+          <img src="../img/instagram.png" alt="Instagram" />
+        </a>
+
+        <p class="text-white-50">Termos de Uso | Política de Privacidade</p>
+        <div class="developersTeam">
+          <span class="fs-6 fst-italic text-secondary">
+            Developed by
+            <!-- GITHUB LINK -->
+          </span>
+          <a
+            class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+            href="https://github.com/ana-fg"
+            target="_blank"
+          >
+            Ana
+          </a>
+          <a
+            class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+            href="https://github.com/18pingu18"
+            target="_blank"
+          >
+            Edo
+          </a>
+          <a
+            class="text-decoration-none text-secondary border-bottom mx-1 px-1"
+            href="https://www.maxdev.live/"
+            target="_blank"
+          >
+            Maxim
+          </a>
+        </div>
+      </div>
+    </footer>
 
     <script src="../script/loja.js"></script>
 
