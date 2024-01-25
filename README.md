@@ -1,8 +1,8 @@
 [Prog. Web - Cliente](https://maximdudai.github.io/pwc_project/)
 
-# PetAdopt 🐾
+# PetCare 🐾
 
-PetAdopt is a heartwarming school project that aims to connect loving homes with adorable animals in need. This web application allows users to easily browse and adopt pets from various shelters, providing a seamless and enjoyable experience for both potential adopters and our furry friends.
+PetCare is a heartwarming school project that aims to connect loving homes with adorable animals in need. This web application allows users to easily browse and adopt pets from various shelters, providing a seamless and enjoyable experience for both potential adopters and our furry friends.
 
 ## Features
 
@@ -32,13 +32,13 @@ PetAdopt is a heartwarming school project that aims to connect loving homes with
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/PetAdopt.git
+   git clone https://github.com/your-username/PetCare.git
 
 2. Open the project in your preferred code editor.
 
 3. Replace <API_KEY> in the JavaScript code with your Petfinder API key.
 
-4. Open index.html in your web browser to start using PetAdopt.
+4. Open index.html in your web browser to start using PetCare.
 
 ## API Integration
 We are grateful to [PetFinder](https://www.petfinder.com/) for providing the API that powers our pet adoption platform.
