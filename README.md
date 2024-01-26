@@ -32,7 +32,7 @@ PetCare is a heartwarming school project that aims to connect loving homes with 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/PetCare.git
+   git clone https://github.com/maximdudai/pwc-project.git
 
 2. Open the project in your preferred code editor.
 
