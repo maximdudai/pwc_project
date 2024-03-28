@@ -2,9 +2,10 @@
 const animalCard = $('.animalCard');
 
 const API_LINK = "https://api.petfinder.com/v2/animals";
-const apiConfig = {
+let api_key = "eyJ0eaXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmUURFVmZScGtsS3JteDZMOTZUN3EwcWpuYUxXQ0hZd0dyTmxXOWt4VlFRQUlnS1NKZiIsImp0aSI6IjJkODgwOGFiMmU2YTE2NjBlMWE0MWE0NmZjNWJkNzI2M2MwN2RhNmRiOWYzMjIxMzc4OTZiZjIyMjE3OGU0NDc2OTQzNjEyMzkzYjM2MjNiIiwiaWF0IjoxNzExNjY4NTI5LCJuYmYiOjE3MTE2Njg1MjksImV4cCI6MTcxMTY3MjEyOSwic3ViIjoiIiwic2NvcGVzIjpbXX0.EaekLCsy__mJy35Xa7ucm0uCMWajFS1mOS1Uc5v2VKFiuKFzRgWrljD2z7_kSw_lee1TsgQZnO0QYkYdydWjJmjR2mgqi2ooVkTgPKfs11I538UULtCi1Oe7ttS1s6PDrr-dNi0uM9vseBaqvtWk3-pyPPuErT9yRLnR3ZNweuXptlBInMPs5DXiwRFeG5X2Ajwe9iMUQJzBbCxrY5MLbTJ4QU8H-MdRxU4uNHt4S_AfPzuyntAGsm5BuHuZVNsZtHMiiTaOJnC3Zl1K80X3E_Pa5Z6obER-z3gJNyJtxMUIniJvbXN_jlP24raLp-TjxNqHzslAwRg7j3hdoX9bVA"; 
+
+let apiConfig = {
   API_LINK: "https://api.petfinder.com/v2/animals",
-  Authorization: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmUURFVmZScGtsS3JteDZMOTZUN3EwcWpuYUxXQ0hZd0dyTmxXOWt4VlFRQUlnS1NKZiIsImp0aSI6ImE5OWE5ZjQ5NTYzNWI3NTBhMjFmYTlkNWYwZDc1MjcyYzI5MmY4NjkwMWE2Y2M2NjY4MzNmMTQzODkxMTU3M2YxMDIxMTVkZjA1OGUyZmJlIiwiaWF0IjoxNzA2MjI1MDk0LCJuYmYiOjE3MDYyMjUwOTQsImV4cCI6MTcwNjIyODY5NCwic3ViIjoiIiwic2NvcGVzIjpbXX0.q_-ZigGsNBYVEbxYxwzfR74AWQsuwyS5AFsklN2MKgHj0Oyu4H1cXYc9SLZmHMcm_OUDSuzXMdXktbC8IaUlOi1g38sPiCHKFmeApxL30V01lHpMiPiuN6bCKHDB1vCVd9UVQHJqimFh0X_dFTtD8TFk9-6vtwhn6OPC180f9SFNsGiy9NURrX0Dp8RDv7aroeM6QzUmaYiVt9nz_dDvdr35Flak4v_dZSySEgi3xsDA_H4nTykoUFQzSP4jUuh_AvUwVA-Egggx1b5fByHPqC8ELBNcI_XqtPOXPkKMZNLUqQgGms_wkbK_yLreLo5gkRLq32fN1IPd0pd85U6CKw",
   limitData: 9
 }
 
@@ -42,19 +43,40 @@ const loadAnimalsData = () => {
     url: apiConfig.API_LINK + '?limit=' + apiConfig.limitData,
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + apiConfig.Authorization,
+      'Authorization': 'Bearer ' + api_key,
     },
     success: function (data) {
       loadedAnimals = data.animals;
       loadAnimalsContainer(loadedAnimals);
     },
     error: function (error) {
-      console.error('Error fetching data:', error);
+      if (error.status === 0) {
+        console.error('Error fetching data:', error);
+        refreshToken();
+      }
     }
   }).fail(function (err) {
     console.log(err);
   });
 };
+function refreshToken() {
+  $.ajax({
+    url: 'https://api.petfinder.com/v2/oauth2/token',
+    method: 'POST',
+    data: {
+      'grant_type': 'client_credentials',
+      'client_id': 'fQDEVfRpklKrmx6L96T7q0qjnaLWCHYwGrNlW9kxVQQAIgKSJf',
+      'client_secret': 'tjFVi0qDHsISxSxnuQybbOncXojDxJlxqufES9CV'
+    },
+    success: function (response) {
+      api_key = response.access_token;
+      loadAnimalsData();
+    },
+    error: function (error) {
+      console.error('Error refreshing token:', error);
+    }
+  });
+}
 
 $(document).ready(() => {
   loadAnimalsData();
@@ -79,8 +101,6 @@ const showAnimalData = (data) => {
 
   // modal.find('.detalhesSobreAnimal').empty();
 
-  console.log(data);
-
   const name = data?.name || "Sem nome";
   const age = data?.age || "Sem idade";
 
@@ -95,8 +115,6 @@ const showAnimalData = (data) => {
   const attributos = data?.attributes || [];
   const attributosLista = $('.detalhesSobreAnimal').find('.animalAttributos');
   
-  console.log('Attributes:', attributos);
-
   $.each(attributos, function (key, value) {
     const listItem = $('<li></li>');
     listItem.html(`${getAttributeName(key)}: ${value === null ? 'N/A' : value ? 'Sim' : 'Não'}`);
@@ -131,7 +149,7 @@ const getAnimalData = (id) => {
     url: apiConfig.API_LINK + '/' + id,
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + apiConfig.Authorization,
+      'Authorization': 'Bearer ' + api_key,
     },
     success: function (data) {
       loadedAnimal = data.animal;
@@ -172,7 +190,7 @@ const filterAnimals = () => {
     url: apiConfig.API_LINK + '?' + coatString + '&' + ageString + '&' + genderString + '&limit=' + apiConfig.limitData,
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + apiConfig.Authorization,
+      'Authorization': 'Bearer ' + api_key,
     },
     success: function (data) {
       loadedAnimal = data.animals;
